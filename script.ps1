@@ -1,5 +1,5 @@
 $inputC = Read-Host "Client id (please put 'd' if dev instance)"
-$list = $inputC + "s1idx*"
+$list = $inputC 
 $idols = @(Get-ADComputer -Filter {Name -like $list} | Select-Object -ExpandProperty Name)
 
 foreach ($idol in $idols) {
